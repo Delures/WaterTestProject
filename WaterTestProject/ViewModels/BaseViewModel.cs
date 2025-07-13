@@ -14,12 +14,12 @@ public abstract partial class BaseViewModel<TDbModel, TModel> : ObservableObject
     [ObservableProperty] private ObservableCollection<TModel> _collection = [];
 
     [ObservableProperty] private TModel? _selectedElement;
-    private readonly CrudDbService<TDbModel, TModel> _dbService;
+    private readonly CrudDbService<TDbModel, TModel> _orderDbService;
 
-    protected BaseViewModel(CrudDbService<TDbModel, TModel> dbService)
+    protected BaseViewModel(CrudDbService<TDbModel, TModel> orderDbService)
     {
-        _dbService = dbService;
-        Collection = new ObservableCollection<TModel>(_dbService.ReadAll().ToList());
+        _orderDbService = orderDbService;
+        Collection = new ObservableCollection<TModel>(_orderDbService.ReadAll().ToList());
     }
 
     [RelayCommand]
@@ -34,7 +34,7 @@ public abstract partial class BaseViewModel<TDbModel, TModel> : ObservableObject
     {
         if (SelectedElement != null)
         {
-            await _dbService.DeleteAsync(SelectedElement);
+            await _orderDbService.DeleteAsync(SelectedElement);
             Collection.Remove(SelectedElement);
         }
     }
@@ -42,6 +42,6 @@ public abstract partial class BaseViewModel<TDbModel, TModel> : ObservableObject
     [RelayCommand]
     private async Task Save()
     {
-        await _dbService.SaveAll(Collection);
+        await _orderDbService.SaveAll(Collection);
     }
 }

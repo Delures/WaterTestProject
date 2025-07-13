@@ -8,7 +8,7 @@ using WaterTestProject.Services.DbServices;
 
 namespace WaterTestProject.ViewModels;
 
-public class EmployeesViewModel(EmployeeDbService dbService) : BaseViewModel<DbEmployee, EmployeeModel>(dbService)
+public class EmployeesViewModel(EmployeeDbService orderDbService) : BaseViewModel<DbEmployee, EmployeeModel>(orderDbService)
 {
     public ObservableCollection<EmployeePosition> Positions { get; } = new(Enum.GetValues<EmployeePosition>().ToList());
 }
