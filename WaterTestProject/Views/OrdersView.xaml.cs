@@ -2,14 +2,13 @@ using System.Windows.Controls;
 using CommunityToolkit.Mvvm.DependencyInjection;
 using WaterTestProject.ViewModels;
 
-namespace WaterTestProject.Views
+namespace WaterTestProject.Views;
+
+public partial class OrdersView : UserControl
 {
-    public partial class OrdersView : UserControl
+    public OrdersView()
     {
-        public OrdersView()
-        {
-            InitializeComponent();
-            DataContext = Ioc.Default.GetService<OrdersViewModel>();
-        }
+        InitializeComponent();
+        DataContext = Ioc.Default.GetService<OrdersViewModel>();
     }
-} 
+}

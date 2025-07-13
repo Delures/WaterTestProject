@@ -7,15 +7,21 @@ public class InMemoryRepository<TModelType> : IRepository<TModelType> where TMod
 {
     private static readonly ConcurrentDictionary<Guid, TModelType> Data = new();
     private readonly List<TModelType> _added = [];
-    private readonly List<TModelType> _updated = [];
     private readonly List<TModelType> _deleted = [];
+    private readonly List<TModelType> _updated = [];
     private bool _disposed;
 
     public IQueryable<TModelType> Query => Data.Values.Where(e => !e.Deleted).AsQueryable();
 
-    public TModelType Get(Guid id) => Data.TryGetValue(id, out var entity) && !entity.Deleted ? entity : null;
+    public TModelType Get(Guid id)
+    {
+        return Data.TryGetValue(id, out var entity) && !entity.Deleted ? entity : null;
+    }
 
-    public Task<TModelType> GetAsync(Guid id) => Task.FromResult(Get(id));
+    public Task<TModelType> GetAsync(Guid id)
+    {
+        return Task.FromResult(Get(id));
+    }
 
     public void Insert(TModelType entity)
     {
@@ -91,4 +97,4 @@ public class InMemoryRepository<TModelType> : IRepository<TModelType> where TMod
         if (_disposed) return;
         _disposed = true;
     }
-} 
+}

@@ -11,7 +11,7 @@ public static class EnumExtensions
 
         if (memberInfo.Length <= 0)
             return null;
-        
+
         var attrs = memberInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false);
         return attrs.Length > 0 ? ((DescriptionAttribute)attrs[0]).Description : value.ToString();
     }

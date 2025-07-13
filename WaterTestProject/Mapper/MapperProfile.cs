@@ -13,7 +13,7 @@ public class MapperProfile : Profile
 
         CreateMap<DbOrder, OrderModel>()
             .ReverseMap();
-        
+
         CreateMap<DbPartner, PartnerModel>()
             .ReverseMap();
     }

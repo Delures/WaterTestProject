@@ -11,10 +11,10 @@ public abstract partial class BaseViewModel<TDbModel, TModel> : ObservableObject
     where TDbModel : DbEntity
     where TModel : BaseModel, new()
 {
+    private readonly CrudDbService<TDbModel, TModel> _orderDbService;
     [ObservableProperty] private ObservableCollection<TModel> _collection = [];
 
     [ObservableProperty] private TModel? _selectedElement;
-    private readonly CrudDbService<TDbModel, TModel> _orderDbService;
 
     protected BaseViewModel(CrudDbService<TDbModel, TModel> orderDbService)
     {

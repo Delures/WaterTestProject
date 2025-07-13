@@ -5,27 +5,27 @@ namespace WaterTestProject.Database.Models;
 public class DbEmployee : DbEntity
 {
     /// <summary>
-    ///  Имя
+    ///     Имя
     /// </summary>
     public virtual string FirstName { get; set; }
-    
+
     /// <summary>
-    /// Фамилия
+    ///     Фамилия
     /// </summary>
     public virtual string LastName { get; set; }
-    
+
     /// <summary>
-    /// Отчество
+    ///     Отчество
     /// </summary>
     public virtual string Patronymic { get; set; }
-    
+
     /// <summary>
-    /// Должность
+    ///     Должность
     /// </summary>
     public virtual EmployeePosition Position { get; set; }
-    
+
     /// <summary>
-    /// Дата рождения
+    ///     Дата рождения
     /// </summary>
     public virtual DateTime DateOfBirth { get; set; }
 }

@@ -12,7 +12,7 @@ public class PartnerMap : ClassMapping<DbPartner>
         Property(partner => partner.Deleted);
         Property(partner => partner.Name);
         Property(partner => partner.TaxpayerIdentificationNumber);
-        
+
         // Связь с курирующим сотрудником
         ManyToOne(partner => partner.Supervisor, m =>
         {

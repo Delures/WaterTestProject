@@ -5,9 +5,9 @@ using WaterTestProject.Services.DbServices;
 
 namespace WaterTestProject.ViewModels;
 
-public class OrdersViewModel(OrderDbService orderDbService, PartnerDbService partnerDbService) : 
+public class OrdersViewModel(OrderDbService orderDbService, PartnerDbService partnerDbService) :
     BaseViewModel<DbOrder, OrderModel>(orderDbService)
 {
-    public ObservableCollection<PartnerModel> Partners => 
+    public ObservableCollection<PartnerModel> Partners =>
         new(partnerDbService.ReadAll().Where(e => !e.Deleted));
 }

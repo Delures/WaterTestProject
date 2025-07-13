@@ -5,9 +5,9 @@ namespace WaterTestProject.Models;
 public partial class OrderModel : BaseModel
 {
     [ObservableProperty] private DateTime _orderDate = DateTime.Now;
-    [ObservableProperty] private decimal _total;
     private PartnerModel? _partner;
     private EmployeeModel? _supervisor;
+    [ObservableProperty] private decimal _total;
 
     public PartnerModel? Partner
     {

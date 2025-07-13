@@ -7,18 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         WindowStartupLocation="CenterOwner">
-        <TabControl>
-                <!-- todo вместо отдельных вью можно использовать одну таблицу, обновлять ее из одной вью модели командами. 
+    <TabControl>
+        <!-- todo вместо отдельных вью можно использовать одну таблицу, обновлять ее из одной вью модели командами. 
         Для этого нужно сделать ДбСервисы наследниками базового интерфейса с описанием CRUD для базовой строки -->
-                <TabItem Header="Работники">
-                        <!-- <ContentControl x:Name="MainContentControl"/> -->
-                        <views:EmployeesView />
-                </TabItem>
-                <TabItem Header="Контрагенты">
-                        <views:PartnersView/>
-                </TabItem>
-                <TabItem Header="Заказы">
-                        <views:OrdersView/>
-                </TabItem>
-        </TabControl>
+        <TabItem Header="Работники">
+            <!-- <ContentControl x:Name="MainContentControl"/> -->
+            <views:EmployeesView />
+        </TabItem>
+        <TabItem Header="Контрагенты">
+            <views:PartnersView />
+        </TabItem>
+        <TabItem Header="Заказы">
+            <views:OrdersView />
+        </TabItem>
+    </TabControl>
 </Window>

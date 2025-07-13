@@ -12,9 +12,6 @@ public class OrderMap : ClassMapping<DbOrder>
         Property(order => order.Deleted);
         Property(order => order.OrderDate);
         Property(order => order.Total);
-        ManyToOne(order => order.Partner, m =>
-        {
-            m.Cascade(Cascade.None);
-        });
+        ManyToOne(order => order.Partner, m => { m.Cascade(Cascade.None); });
     }
 }
