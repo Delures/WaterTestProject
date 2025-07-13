@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterTestProject", "WaterTestProject\WaterTestProject.csproj", "{951C22D2-F8D6-465A-B132-A0E204017E28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterTestProject.Common", "WaterTestProject.Common\WaterTestProject.Common.csproj", "{B85E7693-3397-456D-BD3F-31FCBF6ED70C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterTestProject.Database", "WaterTestProject.Database\WaterTestProject.Database.csproj", "{D8BEFC5C-D03B-44D1-AD22-D376F308AD8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{951C22D2-F8D6-465A-B132-A0E204017E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{951C22D2-F8D6-465A-B132-A0E204017E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{951C22D2-F8D6-465A-B132-A0E204017E28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B85E7693-3397-456D-BD3F-31FCBF6ED70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B85E7693-3397-456D-BD3F-31FCBF6ED70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B85E7693-3397-456D-BD3F-31FCBF6ED70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B85E7693-3397-456D-BD3F-31FCBF6ED70C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BEFC5C-D03B-44D1-AD22-D376F308AD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BEFC5C-D03B-44D1-AD22-D376F308AD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BEFC5C-D03B-44D1-AD22-D376F308AD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BEFC5C-D03B-44D1-AD22-D376F308AD8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

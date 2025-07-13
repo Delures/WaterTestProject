@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CommunityToolkit.Mvvm.DependencyInjection;
+using WaterTestProject.Views;
 
 namespace WaterTestProject;
 
@@ -16,8 +18,9 @@ namespace WaterTestProject;
 /// </summary>
 public partial class MainWindow : Window
 {
-    public MainWindow()
+    public MainWindow(EmployeesView employeesView)
     {
         InitializeComponent();
+        // MainContentControl = employeesView;
     }
 }
